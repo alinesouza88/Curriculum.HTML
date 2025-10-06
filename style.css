@@ -1,0 +1,330 @@
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Cores do tema profissional - Você pode adaptar */
+    --cor-principal: #007BFF; /* Azul de destaque */
+    --cor-fundo: #1E1E1E; /* Cinza escuro/preto (Dark Mode) */
+    --cor-cartao: #2D2D2D; /* Fundo de seção */
+    --cor-texto: #E0E0E0; /* Texto claro */
+    --cor-borda: #444; /* Borda sutil */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo); 
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--cor-principal); 
+    margin-bottom: 10px;
+}
+
+/* Estilo do Cabeçalho/Hero */
+.hero {
+    background-color: var(--cor-cartao);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--cor-principal);
+}
+
+/* Corrigido para garantir que os itens se empilhem */
+.perfil {
+    display: flex;
+    flex-direction: column; /* FORÇA A EMPILHAR: FOTO -> NOME/CARGO */
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Reduzi o gap para ficarem mais próximos */
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-principal);
+}
+
+.info-principal h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.info-principal h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--cor-texto);
+}
+
+/* Estilo dos Contatos (Botões) */
+.contatos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Garante a quebra de linha em telas pequenas */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-principal);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+    transform: translateY(-2px);
+}
+
+/* Ícones (Você precisará de uma biblioteca como Font Awesome ou ícones SVG) */
+/* .icone-tel, .icone-email, etc. { margin-right: 5px; } */
+
+/* Responsividade básica para o cabeçalho */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .info-principal {
+        margin-top: 15px;
+    }
+    .contatos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.secao {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a Experiência/Formação */
+.item-experiencia, .item-formacao {
+    border-left: 3px solid var(--cor-principal);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.item-experiencia h4, .item-formacao h4 {
+    margin-bottom: 5px;
+}
+
+.detalhes {
+    font-style: italic;
+    color: #AAA; /* Texto mais suave */
+    margin-bottom: 10px;
+}
+
+.item-experiencia ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo para as Tags de Habilidades (Conhecimentos) */
+.tags-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.tags-habilidades span {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Estilo para as Soft Skills */
+.soft-skills {
+    list-style-type: none;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.soft-skills li::before {
+    content: "✓"; 
+    color: #4CAF50; /* Um tom de verde para indicar "feito" */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--cor-borda);
+    font-size: 0.9em;
+    color: #888;
+}
+
+.heart {
+    color: #E74C3C; /* Vermelho */
+}
+
+/* Estilo base para TODOS os botões */
+.btn {
+    text-decoration: none;
+    color: var(--cor-fundo); /* #121212 */
+    background-color: var(--cor-principal); /* #00A3FF (Azul) */
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilo para o botão de DESTAQUE (o "Ver Projetos Recentes...") */
+.btn.destaque {
+    background-color: var(--cor-sucesso); /* #2ecc71 (Verde) */
+    color: var(--cor-fundo);
+    font-size: 1em;
+    padding: 12px 25px;
+    border: 2px solid var(--cor-texto); 
+    font-weight: 700;
+    margin-top: 20px;
+    display: inline-block; 
+    transition: all 0.15s ease-in-out; 
+}
+
+/* Efeitos visuais para o DESTAQUE */
+.btn.destaque:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: scale(1.03); /* Aumenta um pouco */
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4); 
+}
+
+.btn.destaque:active {
+    background-color: #1a7e43; /* Fundo mais escuro ao pressionar */
+    transform: scale(0.98); /* Efeito "pressionado" */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+/* ------------------------------------------------------------------- */
+/* REGRAS BÁSICAS DE SEÇÃO (HERANÇA DO CORPO) */
+/* ------------------------------------------------------------------- */
+
+.secao {
+    background-color: var(--cor-cartao); /* #1E1E1E */
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.secao h3 {
+    color: var(--cor-principal); /* #00A3FF */
+    border-bottom: 2px solid var(--cor-cartao);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DOS CARDS DE PROJETO (item-projeto) */
+/* ------------------------------------------------------------------- */
+
+.item-projeto {
+    border: 1px solid var(--cor-principal); /* Borda sutil de destaque */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil para destacar */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-projeto:hover {
+    transform: translateY(-3px); /* Efeito de elevação no hover */
+    box-shadow: 0 10px 20px rgba(0, 163, 255, 0.15); /* Sombra sutil azul */
+}
+
+/* Título do Projeto */
+.item-projeto h4 {
+    color: var(--cor-texto); /* Texto #E0E0E0 */
+    font-weight: 600;
+}
+
+/* Descrição detalhada */
+.item-projeto .detalhes {
+    font-style: italic;
+    color: var(--cor-secundaria); /* #888888 */
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DAS TAGS DE TECNOLOGIA (tags-projeto) */
+/* ------------------------------------------------------------------- */
+
+.tags-projeto {
+    margin: 15px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags-projeto span {
+    background-color: #444; /* Cinza escuro para as tags */
+    color: var(--cor-texto);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILO DOS BOTÕES DE PROJETO (btn-projeto) */
+/* ------------------------------------------------------------------- */
+
+.btn-projeto {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    text-decoration: none;
+    background-color: var(--cor-principal); /* #00A3FF */
+    color: var(--cor-fundo);
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.btn-projeto:hover {
+    background-color: #0077c4; /* Azul um pouco mais escuro no hover */
+    transform: translateY(-1px);
+}
